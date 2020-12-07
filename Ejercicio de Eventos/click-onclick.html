@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hacer click o doble click</title>
+  </head>
+  <body>
+    <script>
+      function hacerclick(elemento) {
+        alert("Has hecho un click ahora el boton se actualizara a 'Click pulsado'.");
+        elemento.value = "Click pulsado";
+        
+      }
+    </script>
+    <h2>Click/Doble Click</h2>
+    <input type="button" value="Haz un click" onclick="this.value= 'Un click pulsado';" ondblclick="this.value='Doble click pulsado';"/>
+    <input type="button" value="Haz un click" onclick="hacerclick(this)">
+    <style type="text/css">
+      input{
+        color: purple;
+        background-color: #d8da3d;
+      }
+
+      h2{
+          border: 3px solid rgb(0, 0, 0);
+          color: purple;
+          margin-right: 1713px;
+      }
+    </style>
+  </body>
+</html>
