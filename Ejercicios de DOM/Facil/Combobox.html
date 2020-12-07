@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Combobox</title>
+  </head>
+  <body>
+    <h1>Combobox</h1>
+    <form>
+      <!-- Formulario -->
+      <select>
+        <!-- Opciones del Combo -->
+        <option value="default">Selecciona un color</option>
+        <option value="red">Rojo</option>
+        <option value="blue">Azul</option>
+        <option value="green">Verde</option>
+        <option value="yellow">Amarillo</option>
+        <option value="orange">Naranja</option>
+      </select>
+    </form>
+    <script type="text/javascript">
+      //Eleccion de color
+
+      let dropdown = document.querySelector('select');
+
+      dropdown.addEventListener('change', function() {
+        const color = this.value;
+
+        switch(color) {
+          case 'default':
+              document.body.style.backgroundColor = 'white';
+              break;
+          case 'red':
+              document.body.style.backgroundColor = 'red';
+              break;
+          case 'blue':
+              document.body.style.backgroundColor = 'blue';
+              break;
+          case 'green':
+              document.body.style.backgroundColor = 'green';
+              break;
+          case 'yellow':
+              document.body.style.backgroundColor = 'yellow';
+              break;
+          case 'orange':
+              document.body.style.backgroundColor = 'orange';
+              break;
+        }
+      })
+      /*
+      function red() {
+        document.body.style.backgroundColor = "rojo";
+      }
+      function blue() {
+        document.body.style.backgroundColor = "blue";
+      }
+      function green() {
+        document.body.style.backgroundColor = "green";
+      }
+      function yellow() {
+        document.body.style.backgroundColor = "yellow";
+      }
+      function orange() {
+        document.body.style.backgroundColor = "orange";
+      }
+      */
+    </script>
+  </body>
+</html>

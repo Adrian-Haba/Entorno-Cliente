@@ -1,0 +1,125 @@
+<Doctype HTML>
+<html>
+    <head>
+    <title>Calculadora</title>
+        <style>
+        body {
+            background-color: #12121f;
+        }
+        h1 {      
+            border-radius: 20px;
+            background-color: #167e56;
+            color: white;
+            text-align: center;
+            margin-left: 570px;
+            margin-right: 570px;
+        }
+        #container {
+            margin: auto;
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            border: 3px solid black;
+            background-color: #167e56 ;
+        }
+        div div {
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            justify-content: space-around;
+        }
+        input {
+            margin: 10px;
+            border: 1px solid black;
+            height: 30px;
+        }
+        </style>
+        <script>
+        let num1 = 0;
+	    let num2 = 0;
+        let opera;
+        
+        function digito(numero){
+            if(num1==0 && num1 !== '0.'){
+                num1 = numero;
+            }else{
+                num1 += numero;
+            }
+            clean();
+        }
+
+        function CE(){
+            num1 = 0;
+            num2 = 0;
+            clean();
+        }
+
+        function operador(valor){
+            if (num1 == 0){
+                num1 = parseInt(document.getElementById("valor_numero").value);
+            }
+            num2 = parseInt(num1);
+            num1= 0;
+            opera = valor;
+        }
+
+        function operar(){
+            switch (opera){
+                case 1:
+                    num1 += num2;
+                break;
+                case 2:
+                    num1 = num2 - num1;
+                break;
+                case 3:
+                    num1 = num2 / num1;
+                break;
+                case 4:
+                    num1 *= num2;
+                    
+                break;
+             }
+            clean();
+            num2 = num1;
+            num1 = 0;
+        }
+
+        function clean(){
+            document.getElementById("valor_numero").value = num1;
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Calculadora</h1>
+        <div id="container">
+            <input type="text" id="valor_numero">
+            <div>
+                <button onclick="digito(1)">1</button>
+                <button onclick="digito(2)">2</button>
+                <button onclick="digito(3)">3</button>
+                <button onclick="digito(4)">4</button>
+            </div>
+
+            <div>
+                <button onclick="digito(5)">5</button>
+                <button onclick="digito(6)">6</button>
+                <button onclick="digito(7)">7</button>
+                <button onclick="digito(8)">8</button>
+            </div>
+
+            <div>
+                <button onclick="digito(9)">9</button>
+                <button onclick="digito(0)">0</button>
+                <button onclick="operador(1)">+</button>
+                <button onclick="operador(2)">-</button>
+            </div>
+
+            <div>
+                <button onclick="operador(3)">/</button>
+                <button onclick="operador(4)">*</button>
+                <button onclick="CE()">CE</button>
+                <button onclick="operar()">=</button>
+            </div>
+        </div>
+    <body>
+</html>

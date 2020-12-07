@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen random</title>
+    <style>
+    button {
+        background-color: #9B9B95;
+        font-family: Copperplate Gothic;
+    }
+    button:hover {
+        background-color: #C8C839;
+    }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="cambiarimagen()">Pulsa para cambiar la imagen</button><br><br>
+    <img id="imagen" src="https://picsum.photos/200/300?random=1" alt="imageAlt">
+    <script>
+        const imagen = document.getElementById('imagen');
+        function cambiarimagen () {
+            const random = Math.floor(Math.random()*100)
+            imagen.setAttribute('src', `https://picsum.photos/200/300?random=${random}`)
+        }
+    </script>
+</body>
+</html>

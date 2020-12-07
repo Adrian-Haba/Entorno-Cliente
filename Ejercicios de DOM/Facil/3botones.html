@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3botones</title>
+  </head>
+  <body>
+    <h1>3 botones</h1>
+    <script type="text/javascript">
+      function boton1(argument) {
+        const parrafo = document.getElementById("p1");
+        if (parrafo.innerHTML == "Texto por defecto") {
+          parrafo.innerHTML = "Texto del botón 1";
+        } else {
+          parrafo.innerHTML = "Texto por defecto";
+        }
+      }
+      function boton2(argument) {
+        const parrafo = document.getElementById("p1");
+        if (parrafo.innerHTML == "Texto del botón 1") {
+          parrafo.innerHTML = "Texto del botón 2";
+        } else {
+          parrafo.innerHTML = "Texto del botón 1";
+        }
+      }
+      function boton3(argument) {
+        const parrafo = document.getElementById("p1");
+        if (parrafo.innerHTML == "Texto del botón 2") {
+          parrafo.innerHTML = "Texto del botón 3";
+        } else {
+          parrafo.innerHTML = "Texto del botón 2";
+        }
+      }
+    </script>
+    <p id="p1">Texto por defecto</p>
+    <button onclick="boton1()" type="button">Texto 1</button>
+    <button onclick="boton2()" type="button">Texto 2</button>
+    <button onclick="boton3()" type="button">Texto 3</button>
+  </body>
+</html>

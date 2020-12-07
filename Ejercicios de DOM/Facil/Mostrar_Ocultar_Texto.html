@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mostrar_Ocultar_Texto</title>
+  </head>
+  <body>
+    <h1>Mostrar/Ocultar un texto con botones</h1>
+    <button onclick="mostrar()" ondblclick="cerrar()">Mostrar/Ocultar</button>
+
+    <div id="flotante" style="display: none">
+      Este texto estaba oculto. Haz doble click para ocultarlo
+    </div>
+    <script type="text/javascript">
+      function mostrar() {
+        div = document.getElementById("flotante");
+        div.style.display = "";
+      }
+
+      function cerrar() {
+        div = document.getElementById("flotante");
+        div.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

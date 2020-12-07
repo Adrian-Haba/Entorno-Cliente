@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      nav {
+        background-color: blue;
+        padding: 10px;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      li:hover {
+        background-color: slategrey;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li class="options" onclick="showView(this)" value="Index">
+          Index
+        </li>
+        <li class="options" onclick="showView(this)" value="Portfolio">
+          Portfolio
+        </li>
+        <li class="options" onclick="showView(this)" value="Blog">
+          Blog
+        </li>
+        <li class="options" onclick="showView(this)" value="Enlaces">
+          Enlaces
+        </li>
+        <li class="options" onclick="showView(this)" value="Contacto">
+          Contacto
+        </li>
+      </ul>
+    </nav>
+
+    <h1 id="viewName"></h1>
+
+    <script>
+      const viewName = document.getElementById("viewName");
+      const options = document.getElementsByClassName("options");
+
+      function showView(element) {
+        const option = element.getAttribute("value");
+        for (optionItem of options) {
+          optionItem.style.background = "blue";
+        }
+        element.style.background = "gray";
+        viewName.innerText = option;
+      }
+    </script>
+  </body>
+</html>
