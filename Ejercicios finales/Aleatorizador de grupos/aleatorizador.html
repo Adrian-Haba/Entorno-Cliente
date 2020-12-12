@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aleatorizador de grupos</title>
+    <link rel="stylesheet" href="aleatorizador.css" />
+  </head>
+
+  <body>
+    <h1 class="title">Aleatorizador de grupos</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <div class="wrap alt">
+      <p class="toggle-wrap">
+        Número de personas por grupo:
+        <a class="choice" href="#choice"
+          ><strong>TOGGLE</strong><span class="switch"></span
+        ></a>
+        Número de grupos:
+      </p>
+      <p class="pergroup-wrap">
+        Número de personas por grupo:
+        <input class="pergroup" type="integer" value="" />
+      </p>
+      <p class="numgroups-wrap">
+        Número de grupos: <input class="numgroups" type="integer" value="" />
+      </p>
+      <p>
+        <textarea name="students" id="students" cols="40" rows="15"></textarea>
+      </p>
+      <button>ALEATORIZAR</button>
+      <div class="groups"></div>
+    </div>
+    <p></p>
+    <script src="aleatorizador.js"></script>
+  </body>
+</html>
